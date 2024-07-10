@@ -1,42 +1,43 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.csc325_oop_designreview_lab;
 
 /**
- *
  * @author MoaathAlrajab
  */
 public abstract class Human {
+    // Class variables to track some information about the Human
     private String name;
-	private String address;
-	private short age;
+    private String address;
+    private short age;
 
-	// constructor that takes only two paras
-	public Human(String name, short age) {
-		this.name = name;
-		this.age = age;
-	}
+    // constructor that takes only two params `name` and `age`
+    public Human(String name, short age) {
+        this.name = name;
+        this.age = age;
+    }
 
-	public String getName() {
-		return name;
-	}
+    // Gets humans name
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    // Set humans name
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public abstract String getAddress() ;
+    // Gets humans address
+    public abstract String getAddress();
 
-	public abstract void setAddress(String address);
+    // Sets humans address
+    public abstract void setAddress(String address);
 
+    // Gets humans age
+    public short getAge() {
+        return age;
+    }
 
-	public short getAge() {
-		return age;
-	}
-
-	public void setAge(short age) {
-		this.age = age;
-	}
+    // Sets humans age
+    public void setAge(short age) {
+        this.age = age;
+    }
 }

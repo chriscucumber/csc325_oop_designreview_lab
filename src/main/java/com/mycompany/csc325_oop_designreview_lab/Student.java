@@ -1,19 +1,38 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.csc325_oop_designreview_lab;
 
 /**
- *
  * @author MoaathAlrajab
  */
-public class Student {
-	// ToDo 1: Make this class a child of Human
+// We make this a child of Human by extending it here
+public class Student extends Human {
+    public int gpa;
+    // We have to add a variable to track state of address in Student since address is abstract in Human
+    public String address;
 
-	// ToDo 2: Fix the resulting errors
+    public Student(String name, int age) {
+        super(name, (short) age);
+    }
 
-	// ToDo 3: Add a field for GPA and create a setter and a getter
-	
-	// ToDo 4: Add comments to your code
+    // Setter and getter for address
+    @Override
+    public String getAddress() {
+        return address;
+    }
+
+    @Override
+    public void setAddress(String _address) {
+        address = _address;
+    }
+
+    public int getGPA() {
+        return gpa;
+    }
+
+    public void setGPA(int _gpa) {
+        gpa = _gpa;
+    }
+
+    public String toString() {
+        return "Student named " + getName() + " is aged " + getAge() + " with " + getGPA() + " GPA";
+    }
 }
